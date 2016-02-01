@@ -13,12 +13,13 @@ var services = {
     facebook:      require('./facebook'),
     twitter:       require('./twitter'),
     gplus:         require('./gplus'),
-    linkedin:      require('./linkedin')
+    linkedin:      require('./linkedin'),
+    pocket:        require('./pocket')
 };
 
 utils.each(services, function (service, key) {
     Service(service);
-    
+
     service.svgi = svg[key];
     service.name = key;
 });
